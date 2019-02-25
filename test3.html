@@ -1,0 +1,47 @@
+<!--3. Реализация кнопки "Вверх"
+Создайте страницу высотой `~3000px` и кнопу "вверх" справа снизу, которая будет видна только в случае, когда страница прокручена по вертикали больше, чем на `1000px`, и будет скрываться при `<1000px`
+
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Задание 3</title>
+    <link href="css/test3.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <button type="button" class="btnup" id="toTop">
+            <span>^</span>
+        </button>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 1000) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+
+            });
+
+            $('#toTop').click(function() {
+
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

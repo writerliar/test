@@ -1,0 +1,26 @@
+<!--
+### 4. Фоновое видео
+Релизуйте страницу, где сверху будет отображаться блок с шириной `100%` страницы, и высотой `600px`. В качестве фона добавьте видео (например, [отсюда](http://www.sample-videos.com/) ), которое стартует сразу после загрузки страницы. И полностью покрывает текущий блок. В центре этого блока должен распологаться заголовок `h1` с любым текстом и полупрозрачным фоном
+
+-->
+
+<!DOCTYPE html> 
+<html lang="ru">
+    <head>
+    <meta charset="utf-8">
+    <title>Задание 4</title>
+    <link href="css/test4.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="video-wrapper">
+        <h1 class="title">Великий заголовок</h1>
+        <video class="video-bg" height="600" autoplay loop preload="auto" muted poster="img/poster.jpg">
+            <source src="video/SampleVideo.mp4" type="video/mp4">
+            <source src="video/SampleVideo.mkv" type="video/mkv">
+            <source src="video/SampleVideo.flv" type="video/flv">
+        </video>
+    </div>
+
+</body>
+</html>
