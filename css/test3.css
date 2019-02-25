@@ -30,6 +30,7 @@ body {
 }
 
 .btnup span {
+    display: block;
     line-height: 100px;
     vertical-align: middle;
 }
